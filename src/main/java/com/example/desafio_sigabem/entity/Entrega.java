@@ -20,7 +20,7 @@ public class Entrega {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private BigDecimal peso;
+    private Double peso;
 
     private String cepOrigem;
 
@@ -31,4 +31,11 @@ public class Entrega {
     private BigDecimal vlTotalFrete;
 
     private LocalDate dataPrevistaEntrega;
+
+    public Entrega(SimulacaoEntregaRequest dto) {
+        this.peso = dto.peso();
+        this.cepOrigem = dto.cepOrigem();
+        this.cepDestino = dto.cepDestino();
+        this.nomeDestinatario = dto.nomeDestinatario();
+    }
 }

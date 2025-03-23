@@ -1,9 +1,7 @@
 package com.example.desafio_sigabem.entity;
 
-import java.math.BigDecimal;
-
 public record SimulacaoEntregaRequest(
-        BigDecimal peso,
+        Double peso,
         String cepOrigem,
         String cepDestino,
         String nomeDestinatario
